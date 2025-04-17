@@ -3,6 +3,8 @@ const path = require('path');
 const indexRouter = require('./routes/index');
 const administradorRouter = require('./routes/administrador');
 const sugerenciasRouter = require('./routes/sugerencias');
+const visitanteRouter = require('./routes/visitante');
+const contactoRouter = require('./routes/contacto');
 
 
 
@@ -26,6 +28,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/administrador', administradorRouter);
 app.use('/sugerencias', sugerenciasRouter);
+app.use('/visitante', visitanteRouter);
+app.use('/contacto', contactoRouter);
 
 // Iniciar el servidor
 app.listen(PORT, () => {
